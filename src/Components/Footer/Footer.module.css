@@ -1,4 +1,13 @@
-.color{
-    color: blue;
-    background-color: red;
+.footer{
+    padding-top: 30px;
+    padding-left: 300px;
+    color:azure ;
+}
+.links{
+    color: azure;
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 17px;
+    font-weight: bold;
+    float: right;
 }

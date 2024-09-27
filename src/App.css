@@ -14,14 +14,8 @@
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #7896d4;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
 .App-link {
@@ -35,4 +29,28 @@
   to {
     transform: rotate(360deg);
   }
+}
+.layout {
+  height: 100vh;
+  width: 100vw;
+  background-color: #f7f9fd;
+  position: fixed;
+}
+.header{
+  width: 100%;
+  height: 10%;
+  background-color: hsl(220, 86%, 71%);
+}
+.content{
+  width: 100%;
+  height: calc(100% - 10% - 10%);
+  background-color: hsl(0, 6%, 87%);
+}
+.footer{
+  width: 100%;
+  height: 10%;
+  background-color: rgb(103, 140, 221);
+}
+.width-45{
+  width: 45%;
 }

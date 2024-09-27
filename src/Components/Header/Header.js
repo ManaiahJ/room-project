@@ -1,9 +1,13 @@
 
+import { Link } from 'react-router-dom/cjs/react-router-dom.min'
 import classes from './Header.module.css'
-export default function Footer() {
+export default function Header() {
     return (
-        <div className={classes.color}>
-            <h1>Footer</h1>
-        </div>
+        <>
+            <div>
+                <button className='btn btn-primary float-start mt-3 ms-2'>Home</button>
+                <Link to="/login" className='btn btn-primary float-end mt-3 me-2'>Login</Link>
+            </div>
+        </>
     )
 }

@@ -1,0 +1,41 @@
+.divide{
+ display: flex;
+ flex-direction: row;
+ height: 100vh ;
+}
+.sidebar{
+    width: 10%;
+    background-color: #128479;
+    height: calc(100% - 10% - 10%); 
+    padding-left: 5px; 
+    padding-top: 5px;
+}
+.body{
+    width: 90%;
+    height: 80%;
+    overflow-y: scroll;
+}
+.link1{
+    text-decoration:none;
+    padding-top: 17px;
+    margin-left: 5px;
+    color: white;
+}
+
+.link1:hover{
+    background-color: #53c46a;
+    justify-content: center;
+}
+.gridcontainer {
+    display: flex;
+    flex-direction: row; /* Stack items vertically */
+    gap:15%;
+    margin-left: 35px; 
+    padding-top: 30px;
+    padding-bottom: 10px;
+    margin-right: 8px;
+    height: fit-content;
+  }
+
+ 
+ 
