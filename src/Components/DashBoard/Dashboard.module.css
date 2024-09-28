@@ -10,11 +10,7 @@
     padding-left: 5px; 
     padding-top: 5px;
 }
-.body{
-    width: 90%;
-    height: 80%;
-    overflow-y: scroll;
-}
+
 .link1{
     text-decoration:none;
     padding-top: 17px;
@@ -26,16 +22,12 @@
     background-color: #53c46a;
     justify-content: center;
 }
-.gridcontainer {
-    display: flex;
-    flex-direction: row; /* Stack items vertically */
-    gap:15%;
-    margin-left: 35px; 
-    padding-top: 30px;
-    padding-bottom: 10px;
-    margin-right: 8px;
-    height: fit-content;
-  }
+
+.body{
+    width: 90%;
+    height: 80%;
+    overflow-y: scroll;
+}
 
  
  

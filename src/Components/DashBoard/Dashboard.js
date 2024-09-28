@@ -1,113 +1,47 @@
 import React from 'react'
 import classes from './Dashboard.module.css'
 import { Link } from 'react-router-dom/cjs/react-router-dom.min'
+import Cards from '../Cards/Cards';
+import Appinfo from '../Appinfo/Appinfo';
+import { icons, sidebarline } from '../Constants/Constants';
+import { FaBell, FaCodepen, FaCubes, FaFirstOrder, FaFreeCodeCamp, FaHandshake, FaTachometerAlt, FaWrench } from "react-icons/fa";
+import { FaChartLine } from "react-icons/fa";
+import { GrTasks } from 'react-icons/gr';
+import { MdBolt, MdOutlineInfo } from 'react-icons/md';
+import { HiOutlineBriefcase } from 'react-icons/hi';
+import { IoMdEye } from 'react-icons/io';
 export default function Dashboard() {
     return (
         <>
             <div className="content">
                 <div className={classes.divide}>
+                    {/*This sidebar get data from array declared in top as constant*/ }
                     <div className={classes.sidebar}>
-                        <div className={classes.link1}>
-                            <Link to="/" className={classes.link1}>Dashboard</Link>
-                        </div>
-                        <div className={classes.link1}>
-                            <Link to="/" className={classes.link1}>Scans</Link>
-                        </div>
-                        <div className={classes.link1}>
-                            <Link to="/" className={classes.link1}>Analysis</Link>
-                        </div>
-                        <div className={classes.link1}>
-                            <Link to="/" className={classes.link1}>Stock Info</Link>
-                        </div>
-                        <div className={classes.link1}>
-                            <Link to="/" className={classes.link1}>Portifolio</Link>
-                        </div>
-                        <div className={classes.link1}>
-                            <Link to="/" className={classes.link1}>Watchlist</Link>
-                        </div>
-                        <div className={classes.link1}>
-                            <Link to="/" className={classes.link1}>Positional</Link>
-                        </div>
-                        <div className={classes.link1}>
-                            <Link to="/" className={classes.link1}>Sec Rotation</Link>
-                        </div>
-                        <div className={classes.link1}>
-                            <Link to="/" className={classes.link1}>MB</Link>
-                        </div>
-                        <div className={classes.link1}>
-                            <Link to="/" className={classes.link1}>Tranding Stocks</Link>
-                        </div>
-                        <div className={classes.link1}>
-                            <Link to="/" className={classes.link1}>Sectors</Link>
-                        </div>
-                        <div className={classes.link1}>
-                            <Link to="/" className={classes.link1}>Deals</Link>
-                        </div>
-                        <div className={classes.link1}>
-                            <Link to="/" className={classes.link1}>Alerts</Link>
-                        </div>
-                        <div className={classes.link1}>
-                            <Link to="/" className={classes.link1} >Tooles</Link>
-                        </div>
+                        {sidebarline.map((item, index) => {
+                            return (
+                                <div key={index}  className={classes.link1}>
+                                    <span>{index===0?<FaTachometerAlt/>:index===1?<FaChartLine/>:index===2?<GrTasks />:index===3?<MdOutlineInfo />:
+                                    index===4?<HiOutlineBriefcase />:index===5?<IoMdEye />:index===6?<MdBolt />:index===7?<FaFirstOrder />:
+                                    index===8?<FaFreeCodeCamp />:index===9?<FaCubes />:index===10?<FaCodepen />:index===11?<FaHandshake />:
+                                    index===12?<FaBell />:<FaWrench />  }</span>
+                                    <Link to="/" className={classes.link1}>{item}</Link>
+                                </div>
+                            )
+                        })}
                     </div>
-                    <div className={classes.body}>
-                        <div className='row ms-0 me-0 '>
-                            <div class="card w-25 ms-5 mt-3 shadow ">
-                                <div class="card-body">
-                                    <h4 class="card-title">Card title</h4>
-                                    <p class="card-text">Some example text. Some example text.</p>
-                                </div>
-                            </div>
-                            <div class="card w-25 ms-5 mt-3 shadow">
-                                <div class="card-body">
-                                    <h4 class="card-title">Card title</h4>
-                                    <p class="card-text">Some example text. Some example text.</p>
-                                </div>
-                            </div>
-                            <div class="card w-25 ms-5 mt-3 shadow">
-                                <div class="card-body">
-                                    <h4 class="card-title">Card title</h4>
-                                    <p class="card-text">Some example text. Some example text.</p>
-                                </div>
-                            </div>
-                            <div class="card w-25 ms-5 mt-3 shadow">
-                                <div class="card-body">
-                                    <h3 class="card-title">Card title</h3>
-                                    <p class="card-text">Some example text. Some example text.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <div className={classes.gridcontainer}>
-                                <div class="card width-45 shadow">
-                                    <div class="card-body">
-                                        <h3 class="card-title border-bottom">AllApps</h3>
-                                    </div>
-                                </div>
-                                <div class="card width-45 shadow">
-                                    <div class="card-body">
-                                        <h3 class="card-title border-bottom">MyApps</h3>
-                                        
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={classes.gridcontainer}>
-                                <div class="card width-45 shadow">
-                                    <div class="card-body">
-                                        <h3 class="card-title border-bottom">YouTute</h3>
-                                    </div>
-                                </div>
-                                <div class="card width-45 shadow">
-                                    <div class="card-body">
-                                        <h3 class="card-title border-bottom">MyNew</h3>
-                                       
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
 
+                    <div className={classes.body}>
+                        {/*This cards get data from back end and show here as a bar*/ }
+                        <div>
+                            <Cards />
+                        </div>
+                        {/*This cards show all app info from back end*/ }
+                        <div>
+                            <Appinfo />
+                        </div>
                     </div>
                 </div>
+
             </div>
         </>
     )
