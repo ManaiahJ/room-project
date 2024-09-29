@@ -1,0 +1,15 @@
+.form{
+    padding-top: px;
+    margin-left: 10%;
+    background-color: white;
+    border: 1px solid #e2dfdf;
+    border-radius: 10px;
+    width: 40%;
+}
+.heading{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(177, 185, 185);
+}

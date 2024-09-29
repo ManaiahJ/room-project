@@ -1,2 +1,28 @@
-.content{
+.content1 {
+    float: left;
+    margin-left: 10%;
+    justify-content: space-between;
+}
+
+.content2 {
+    text-decoration: none;
+    float: right;
+}
+
+.links {
+    text-decoration: none;
+    margin-right: 15px;
+    font-size: 14px;
+}
+
+.header {
+    color: #bdc0c0;
+}
+
+:links {
+    color: hsl(225, 4%, 79%);
+}
+
+.header2 {
+    color: #bdc0c0;
 }
